@@ -35,20 +35,30 @@ export function SessionList({ sessions, onDelete }: SessionListProps) {
             <p>更新: {formatDate(session.updatedAt)}</p>
           </div>
 
-          <div className="flex gap-2">
-            <Link href={`/sessions/${session.id}`} className="flex-1">
-              <Button className="w-full">続きから開始</Button>
-            </Link>
-            <Button
-              variant="danger"
-              onClick={() => {
-                if (confirm('本当に削除しますか？')) {
-                  onDelete(session.id);
-                }
-              }}
-            >
-              削除
-            </Button>
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <Link href={`/sessions/${session.id}`} className="flex-1">
+                <Button className="w-full">続きから開始</Button>
+              </Link>
+              <Button
+                variant="danger"
+                onClick={() => {
+                  if (confirm('本当に削除しますか？')) {
+                    onDelete(session.id);
+                  }
+                }}
+              >
+                削除
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Link href={`/sessions/${session.id}/edit`} className="flex-1">
+                <Button variant="secondary" className="w-full">編集</Button>
+              </Link>
+              <Link href={`/sessions/${session.id}/cards`} className="flex-1">
+                <Button variant="secondary" className="w-full">カード編集</Button>
+              </Link>
+            </div>
           </div>
         </Card>
       ))}
