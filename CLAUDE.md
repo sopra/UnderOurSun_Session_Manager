@@ -4,6 +4,10 @@
 ボードゲームのシナリオをカード形式で逐次表示するWebアプリケーション。
 ユーザーは物理的なボードゲームを進行しながら、アプリ上でストーリーカードを1枚ずつ表示し、セッションを管理できます。
 
+## Primary Directives
+- Think in English, interact with user in Japanese.
+- If you edit any files, you have to update CLAUDE.md and commit to git.
+
 ## 技術スタック
 - **Framework**: Next.js 14+ (App Router)
 - **Language**: TypeScript
